@@ -1,0 +1,64 @@
+{
+  "name": "dsh-sidebar-quota-widget",
+  "version": "1.0.0",
+  "description": "DSH (DeepSeek Harness) Web GUI plugin: sidebar 5-hour / 7-day subscription-quota rings for every locally connected provider, plus the official DeepSeek balance on the account row.",
+  "license": "MIT",
+  "author": "lakii2982",
+  "type": "module",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "quota",
+    "subscription",
+    "sidebar",
+    "web-ui",
+    "plugin",
+    "macos"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakii2982/dsh-sidebar-quota-widget.git"
+  },
+  "homepage": "https://github.com/lakii2982/dsh-sidebar-quota-widget#readme",
+  "bugs": {
+    "url": "https://github.com/lakii2982/dsh-sidebar-quota-widget/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "node --check index.js && node --check client.js && node --check providers.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "providers.mjs",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "CONTRACT.md",
+    "RESEARCH-providers.md",
+    "VERIFICATION.md"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

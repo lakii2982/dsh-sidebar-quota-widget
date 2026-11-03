@@ -1,0 +1,8 @@
+# Sidebar quota widget bundle patch: one Host row. The Host half reads the
+# official DeepSeek balance and each connected provider's subscription usage,
+# then serves one JSON snapshot; the Client half (dsh.client in package.json)
+# paints the balance number on the account row and the remaining-quota rings
+# in the sidebar footer.
+- insert:
+    - id: sidebar-quota-widget
+      name: 'dsh-sidebar-quota-widget'

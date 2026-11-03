@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Sidebar Quota Widget",
+    "description": "Shows the official DeepSeek account balance and 5-hour / 7-day remaining-quota rings for the other connected providers above the sidebar account row."
+  }
+}
